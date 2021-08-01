@@ -1,4 +1,4 @@
-package org.vardhantrainings.stubbing;
+package org.vardhantrainings.behavior.verification;
 
 import java.time.LocalDate;
 import java.util.Objects;

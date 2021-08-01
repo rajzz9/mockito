@@ -1,15 +1,12 @@
-package org.vardhantrainings.stubbing;
+package org.vardhantrainings.bdd.stubbing;
 
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Book {
     private String bookId;
     private String title;
     private int price;
     private LocalDate publishedDate;
-
-    public Book(){}
 
     public Book(String bookId, String title, int price, LocalDate publishedDate) {
         this.bookId = bookId;
@@ -48,18 +45,5 @@ public class Book {
 
     public void setPublishedDate(LocalDate publishedDate) {
         this.publishedDate = publishedDate;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return price == book.price && Objects.equals(title, book.title) && Objects.equals(publishedDate, book.publishedDate);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(title, price, publishedDate);
     }
 }
